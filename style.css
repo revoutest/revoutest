@@ -1,0 +1,160 @@
+@font-face {
+  font-family: "CustomFont";
+  src: url("CustomFont.woff2") format("woff2");
+}
+
+.montserrat-uniquifier {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Sticky navbar */
+.sticky-nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #333;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.sticky-nav nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sticky-nav nav ul li {
+  margin: 0 15px;
+}
+
+.sticky-nav nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Animasi Giggle */
+@keyframes giggle {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+}
+
+/* Tombol */
+.giggle-button {
+  font-family: "Montserrat", sans-serif;
+  left: 50vw;
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: #194461;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  outline: #412d3a;
+  border-radius: 4px;
+  transition: transform 0.1s ease;
+}
+
+/* Animasi Giggle saat dihover */
+.giggle-button:hover {
+  animation: giggle 1s ease-in-out;
+}
+
+/* Text shadow */
+.text-shadow {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive background image */
+.responsive-background {
+  background: url("./bg.jpg") no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive image */
+.responsive-image picture img {
+  width: 100%;
+  height: auto;
+}
+
+/* Asymmetrical Grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  gap: 10px;
+}
+
+.grid-item {
+  background-color: #ccc;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-size: 1.2em;
+  background: url("./spiritEmber.jpg") no-repeat center center/cover;
+}
+
+/* Simple animation */
+.grid-item:nth-child(odd) {
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Simple transition */
+.grid-item:hover {
+  background: url("./stroomeee.jpg") no-repeat center center/cover;
+  transition: 2s ease;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Centering element using Flex */
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* height: 100vh; */
+  background-color: #f4f4f4;
+}
